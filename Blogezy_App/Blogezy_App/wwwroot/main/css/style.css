@@ -33,11 +33,66 @@ body {
 }
 
 #main {
-  margin-left: 170px;
+  margin-left: 270px;
+}
+#main .title {
+  padding: 55px 0;
+}
+#main .title .right aside {
+  margin: 50px 0;
+}
+#main .title .right img {
+  height: 150px;
+  margin: 20px 0;
+}
+#main .title .right p {
+  font-size: 12px;
+}
+#main .title .right .sub {
+  box-sizing: border-box;
+}
+#main .title .right .sub ul {
+  padding: 10px 0;
+  margin: 35px 0;
+}
+#main .title .right .sub ul li {
+  font-size: 20px;
+  display: inline;
+  background-color: black;
+  border-radius: 50px;
+  margin: 3px;
+  padding: 10px;
+}
+#main .title .right .sub ul li i {
+  font-size: 20px;
+  color: white;
+}
+#main .title .right .cat {
+  margin-top: 40px;
+}
+#main .title .right .cat ul {
+  padding: 10px 0;
+  margin: 20px 0;
+}
+#main .title .right .cat ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+#main .title .right .cat ul li a {
+  color: black;
+  padding: 10px 0;
+}
+#main .title .right .tag a {
+  background: #d1d1d1;
+  color: black;
+  font-size: 12px;
+  padding: 5px 7px;
+  margin: 2px 4px;
 }
 #main #mainArticle {
   padding: 55px 0;
   border: 1px solid gray;
+  border-top-style: none;
   border-left-style: none;
   border-right-style: none;
 }
@@ -61,65 +116,3 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-body {
-    background: #0250c5;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 10px;
-}
-
-.innerwrapper {
-    width: 450px;
-    height: 600px;
-    background-color: white;
-    border-radius: 3px;
-    padding-top: 70px;
-    padding-bottom: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 30px;
-}
-
-    .innerwrapper h2 {
-        font-size: 30px;
-        text-transform: uppercase;
-        text-align: center;
-        font-family: Railway-Black;
-        font-weight: bold;
-        margin-bottom: 70px;
-    }
-
-form input {
-    display: block;
-    padding: 20px 10px;
-    padding: 20px 10px;
-}
-
-form #email, #password, #submit {
-    width: 100%;
-    padding: 10px 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-form #checkbox, #remember {
-    display: inline;
-}
-
-#submit {
-    background-color: #d33f8d;
-    border-radius: 3px;
-    padding: 10px;
-    border-color: #d33f8d;
-    color: white;
-    text-transform: uppercase;
-    font-size: 20px;
-    box-shadow: 0;
-    border-width: 1px;
-}
-

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<Article>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -89,164 +90,250 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-9">
-                            <article id="mainArticle">
-                                <header>
-                                    <h5>
-                                        <a href="#">
-                                            Beautiful Day With Friends In Paris
+                    <div class="title row">
+                        <div class="col-md-9 blog">
+                            @foreach (Article item in Model)
+                            {
+                                <article id="mainArticle">
+                                    <header>
+                                        <h5>
+                                            <a href="#">
+                                                @item.Name
+                                            </a>
+                                        </h5>
+                                        <div class="meta">
+                                            <ul>
+                                                <li><i class="far fa-calendar-alt"></i> @item.AddedDate</li>
+                                                <li><i class="fab fa-bandcamp"></i>@item.MetaKeywords</li>
+                                                <li><i class="fas fa-comments"></i>@item.MetaDescription</li>
+                                            </ul>
+                                        </div>
+                                    </header>
+                                    <div class="entry-content">
+                                        <a href="">
+                                            <img src="~/main/images/@item.PhotoPath" alt="" class="img-fluid" />
                                         </a>
-                                    </h5>
-                                    <div class="meta">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
-                                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
-                                            <li><i class="fas fa-comments"></i>3 Comments</li>
-                                        </ul>
-                                    </div>
-                                </header>
-                                <div class="entry-content">
-                                    <a href="">
-                                        <img src="~/main/images/page1.jpg" alt="" class="img-fluid" />
-                                    </a>
-                                    <p>
-                                        Whether an identity or campaign, we make your brand visible, relevant and effective by
-                                        placing the digital at the center of its ecosystem, without underestimating the power of
-                                        traditional media. Whether an identity or campaign, we make your brand visible.
-                                    </p>
+                                        <p>
+                                            @item.Description
+                                        </p>
 
-                                    <a href="#" class="btn btn-outline-info">
-                                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
-                                                        aria-hidden="true"></span>
-                                    </a>
-                                </div>
-                            </article>
-                            <article id="mainArticle">
-                                <header>
-                                    <h5>
-                                        <a href="#">
-                                            Nature valley with cooling environment
+                                        <a href="#" class="btn btn-outline-info">
+                                            Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
+                                                            aria-hidden="true"></span>
                                         </a>
-                                    </h5>
-                                    <div class="meta">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
-                                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
-                                            <li><i class="fas fa-comments"></i>3 Comments</li>
-                                        </ul>
                                     </div>
-                                </header>
-                                <div class="entry-content">
-                                    <a href="">
-                                        <img src="~/main/images/page2.jpg" alt="" class="img-fluid" />
-                                    </a>
-                                    <p>
-                                        Whether an identity or campaign, we make your brand visible, relevant and effective by
-                                        placing the digital at the center of its ecosystem, without underestimating the power of
-                                        traditional media. Whether an identity or campaign, we make your brand visible.
-                                    </p>
+                                </article>
+                            }
 
-                                    <a href="#" class="btn btn-outline-info">
-                                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
-                                                        aria-hidden="true"></span>
-                                    </a>
+                            @*<article id="mainArticle">
+                <header>
+                    <h5>
+                        <a href="#">
+                            Nature valley with cooling environment
+                        </a>
+                    </h5>
+                    <div class="meta">
+                        <ul>
+                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
+                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
+                            <li><i class="fas fa-comments"></i>3 Comments</li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="entry-content">
+                    <a href="">
+                        <img src="~/main/images/page2.jpg" alt="" class="img-fluid" />
+                    </a>
+                    <p>
+                        Whether an identity or campaign, we make your brand visible, relevant and effective by
+                        placing the digital at the center of its ecosystem, without underestimating the power of
+                        traditional media. Whether an identity or campaign, we make your brand visible.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-info">
+                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
+                                        aria-hidden="true"></span>
+                    </a>
+                </div>
+            </article>
+            <article id="mainArticle">
+                <header>
+                    <h5>
+                        <a href="#">
+                            Elegant, Simple & Minimalist Blog Made With Love
+                        </a>
+                    </h5>
+                    <div class="meta">
+                        <ul>
+                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
+                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
+                            <li><i class="fas fa-comments"></i>3 Comments</li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="entry-content">
+                    <a href="">
+                        <img src="~/main/images/page3.jpg" alt="" class="img-fluid" />
+                    </a>
+                    <p>
+                        Whether an identity or campaign, we make your brand visible, relevant and effective by
+                        placing the digital at the center of its ecosystem, without underestimating the power of
+                        traditional media. Whether an identity or campaign, we make your brand visible.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-info">
+                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
+                                        aria-hidden="true"></span>
+                    </a>
+                </div>
+            </article>
+            <article id="mainArticle">
+                <header>
+                    <h5>
+                        <a href="#">
+                            15 Best Healthy and Easy Salad Recipes
+                        </a>
+                    </h5>
+                    <div class="meta">
+                        <ul>
+                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
+                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
+                            <li><i class="fas fa-comments"></i>3 Comments</li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="entry-content">
+                    <a href="">
+                        <img src="~/main/images/page4.jpg" alt="" class="img-fluid" />
+                    </a>
+                    <p>
+                        Whether an identity or campaign, we make your brand visible, relevant and effective by
+                        placing the digital at the center of its ecosystem, without underestimating the power of
+                        traditional media. Whether an identity or campaign, we make your brand visible.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-info">
+                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
+                                        aria-hidden="true"></span>
+                    </a>
+                </div>
+            </article>
+            <article id="mainArticle">
+                <header>
+                    <h5>
+                        <a href="#">
+                            Easy Homemade Candy Recipes and Ideas
+                        </a>
+                    </h5>
+                    <div class="meta">
+                        <ul>
+                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
+                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
+                            <li><i class="fas fa-comments"></i>3 Comments</li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="entry-content">
+                    <a href="">
+                        <img src="~/main/images/page5.jpg" alt="" class="img-fluid" />
+                    </a>
+                    <p>
+                        Whether an identity or campaign, we make your brand visible, relevant and effective by
+                        placing the digital at the center of its ecosystem, without underestimating the power of
+                        traditional media. Whether an identity or campaign, we make your brand visible.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-info">
+                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
+                                        aria-hidden="true"></span>
+                    </a>
+                </div>
+            </article>*@
+
+                        </div>
+                        <div class="right col-md-3">
+                            <div class="input-group ">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                       aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
                                 </div>
-                            </article>
-                            <article id="mainArticle">
-                                <header>
-                                    <h5>
-                                        <a href="#">
-                                            Elegant, Simple & Minimalist Blog Made With Love
-                                        </a>
-                                    </h5>
-                                    <div class="meta">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
-                                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
-                                            <li><i class="fas fa-comments"></i>3 Comments</li>
-                                        </ul>
-                                    </div>
-                                </header>
-                                <div class="entry-content">
-                                    <a href="">
-                                        <img src="~/main/images/page3.jpg" alt="" class="img-fluid" />
-                                    </a>
+                            </div>
+                            <aside class="about">
+                                <h5>About Me</h5>
+
+                                <div class="text-center">
+                                    <img src="~/main/images/download.jpg" class="rounded-circle">
+
                                     <p>
-                                        Whether an identity or campaign, we make your brand visible, relevant and effective by
-                                        placing the digital at the center of its ecosystem, without underestimating the power of
-                                        traditional media. Whether an identity or campaign, we make your brand visible.
+                                        Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet
+                                        eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet
+                                        pede, consectetur neque risus.
                                     </p>
-
-                                    <a href="#" class="btn btn-outline-info">
-                                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
-                                                        aria-hidden="true"></span>
-                                    </a>
                                 </div>
-                            </article>
-                            <article id="mainArticle">
-                                <header>
-                                    <h5>
-                                        <a href="#">
-                                            15 Best Healthy and Easy Salad Recipes
-                                        </a>
-                                    </h5>
-                                    <div class="meta">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
-                                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
-                                            <li><i class="fas fa-comments"></i>3 Comments</li>
-                                        </ul>
-                                    </div>
-                                </header>
-                                <div class="entry-content">
-                                    <a href="">
-                                        <img src="~/main/images/page4.jpg" alt="" class="img-fluid" />
-                                    </a>
+
+                            </aside>
+                            <aside class="sub">
+                                <h6>SUBSCRIBE & FOLLOW</h6>
+                                <div class="text-center">
+                                    <ul>
+                                        <li><i class="fab fa-facebook-f"></i></li>
+                                        <li><i class="fab fa-twitter"></i></li>
+                                        <li><i class="fab fa-instagram"></i></li>
+                                        <li><i class="fab fa-pinterest-p"></i></li>
+                                    </ul>
+                                </div>
+
+                            </aside>
+                            <aside class="cat">
+                                <h5>Categories</h5>
+                                <div class="text-center">
+                                    <ul>
+                                        <li><a href="">Journey (40)</a></li>
+                                        <li><a href="">Photography (08)</a></li>
+                                        <li><a href="">Lifestyle (11)</a></li>
+                                        <li><a href="">Food & Drinks (21)</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+
+                            <aside class="text">
+                                <h5>Text Widget</h5>
+
+                                <div class="text-center">
                                     <p>
-                                        Whether an identity or campaign, we make your brand visible, relevant and effective by
-                                        placing the digital at the center of its ecosystem, without underestimating the power of
-                                        traditional media. Whether an identity or campaign, we make your brand visible.
+                                        Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed.
+                                        Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident
+                                        chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do
+                                        umami readymade swag.
                                     </p>
-
-                                    <a href="#" class="btn btn-outline-info">
-                                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
-                                                        aria-hidden="true"></span>
-                                    </a>
                                 </div>
-                            </article>
-                            <article id="mainArticle">
-                                <header>
-                                    <h5>
-                                        <a href="#">
-                                            Easy Homemade Candy Recipes and Ideas
-                                        </a>
-                                    </h5>
-                                    <div class="meta">
-                                        <ul>
-                                            <li><i class="far fa-calendar-alt"></i> July 03, 2017</li>
-                                            <li><i class="fab fa-bandcamp"></i>Branding,Design</li>
-                                            <li><i class="fas fa-comments"></i>3 Comments</li>
-                                        </ul>
-                                    </div>
-                                </header>
-                                <div class="entry-content">
-                                    <a href="">
-                                        <img src="~/main/images/page5.jpg" alt="" class="img-fluid" />
-                                    </a>
-                                    <p>
-                                        Whether an identity or campaign, we make your brand visible, relevant and effective by
-                                        placing the digital at the center of its ecosystem, without underestimating the power of
-                                        traditional media. Whether an identity or campaign, we make your brand visible.
-                                    </p>
 
-                                    <a href="#" class="btn btn-outline-info">
-                                        Read More <span class="glyphicon glyphicon glyphicon-chevron-right"
-                                                        aria-hidden="true"></span>
-                                    </a>
+                            </aside>
+
+                            <aside class="cat">
+                                <h5>Archives</h5>
+                                <div class="text-center">
+                                    <ul>
+                                        <li><a href="">March 2017 (40)</a></li>
+                                        <li><a href="">April 2017 (08)</a></li>
+                                        <li><a href="">May 2017 (11)</a></li>
+                                        <li><a href="">Jun 2017 (21)</a></li>
+                                    </ul>
                                 </div>
-                            </article>
+                            </aside>
 
+                            <aside class="tag">
+                                <h5>Tags</h5>
+                                <div class="text-center">
+                                    <a href="">LOGO </a>
+                                    <a href="">BUSINESS </a>
+                                    <a href="">CORPORATE </a>
+                                    <a href="">E-COMMERCE </a>
+                                    <a href="">AGENCY </a>
+                                    <a href="">RESPONSIVE</a>
+                                </div>
+                            </aside>
                         </div>
                     </div>
 

@@ -10,7 +10,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Models\ViewModels\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
