@@ -21,15 +21,16 @@
 
             <div class="innerwrapper">
                 <h2>login</h2>
-                <div asp-validation-summary="ModelOnly"></div>
-                <form asp-action="Login" asp-controller="Account" method="post">
 
-                    <input type="email" asp-for="Email" name="" id="email" placeholder="Email">
-                    <input type="password" asp-for="Password" name="" id="password" placeholder="Password">
+                <form asp-action="Login" asp-controller="Account" method="post">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <input type="email" asp-for="Email" id="email" placeholder="Email">
+                    <span asp-validation-for="Email"></span>
+                    <input type="password" asp-for="Password"id="password" placeholder="Password">
+                    <span asp-validation-for="Password"></span>
                     <input type="checkbox" name="" id="checkbox">
                     <p id="remember">Remember me</p>
                     <input type="submit" value="Login" id="submit">
-
                 </form>
             </div>
     </div>

@@ -19,6 +19,9 @@ namespace Blogezy_App.Models.ViewModels
         [Required]
         public string Email { get; set; }
 
+        [Required]
+        public string UserName { get; set; }
+
         [Required(ErrorMessage = "Password is required")]
         [StringLength(255, ErrorMessage = "Must be between 5 and 255 characters", MinimumLength = 5)]
         [DataType(DataType.Password)]

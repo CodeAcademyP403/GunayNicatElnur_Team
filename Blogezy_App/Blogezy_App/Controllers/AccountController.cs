@@ -47,9 +47,11 @@ namespace Blogezy_App.Controllers
                 {
                     await _signInManager.PasswordSignInAsync(appUser, loginModel.Password, true, true);
 
-                    HttpContext.Session.SetString("name", appUser.UserName);
+                    //string User = appUser.UserName;
 
-                    HttpContext.Session.SetString("id", appUser.Id);
+                    //HttpContext.Session.SetString("UserName", User);
+
+                    //HttpContext.Session.SetString("Id", appUser.Id);
                     return RedirectToAction("Index", "Home");
                 }
             }
@@ -72,17 +74,31 @@ namespace Blogezy_App.Controllers
                 {
                     Name = registerModel.Name,
                     SurName = registerModel.SurName,
-                    Email = registerModel.Email
+                    Email = registerModel.Email,
+                    UserName = registerModel.UserName
                 };
 
                 IdentityResult identityResult = await _userManager.CreateAsync(userApp,registerModel.Password);
 
                 if (identityResult.Succeeded)
                 {
-                    
+                    return RedirectToAction("Login","Account");
+                }
+                else
+                {
+                    AddErrorToModelState(identityResult.Errors);
+                    return View();
                 }
             }
             return View();
+        }
+
+        private void AddErrorToModelState(IEnumerable<IdentityError> errors)
+        {
+            foreach (IdentityError error in errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
         }
     }
 }
