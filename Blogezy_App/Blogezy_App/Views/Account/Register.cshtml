@@ -1,4 +1,4 @@
-﻿@Model RegisterModel
+﻿@model RegisterModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +20,10 @@
             <form action="" method="post">
                 <div asp-validation-summary="ModelOnly"></div>
 
-             
-                <input  type="text" name="" id="name" placeholder="Name">
+                <div class="form-group">
+                    <input asp-for="" type="text" name="" id="name" placeholder="Name">
+                    <span asp-validation-for=""></span>
+                </div>
                 <input type="text" name="" id="surname" placeholder="Surname">
                 <input type="email" name="" id="email" placeholder="Email">
                 <input type="password" name="" id="password" placeholder="Password">
