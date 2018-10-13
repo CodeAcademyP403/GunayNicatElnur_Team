@@ -1,0 +1,88 @@
+﻿@model List<Menu>
+
+@{
+    ViewData["Title"] = "Default";
+}
+
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <img src="~/main/images/logo.png" alt="">
+        <p>Graduating from the halls of the University Of Western Sydney in late 2011.</p>
+    </div>
+
+    <ul class="list-unstyled components">
+        @foreach (Menu menu in Model)
+        {
+            @if (menu.SubMenus.Count() == 0)
+            {
+                <li>
+                    <a asp-controller=@menu.ControllerName asp-action=@menu.ActionName>@menu.Name</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">@menu.Name</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        @foreach (SubMenu subMenu in menu.SubMenus)
+                        {
+                            <li>
+                                <a asp-controller=@subMenu.ControllerName  asp-action=@subMenu.ActionName>@subMenu.Name</a>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            }
+
+        }
+
+
+        @*<li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+        </li>
+        <li>
+            <a asp-controller="Account" asp-action="Register">Register</a>
+        </li>
+        <li>
+            <a asp-action="Login" asp-controller="Account">Login</a>
+        </li>
+
+        <li>
+            <a href="#featuresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Features</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="#">Standart Post</a>
+                </li>
+                <li>
+                    <a href="#">Video Post</a>
+                </li>
+                <li>
+                    <a href="#">Audio Post</a>
+                </li>
+                <li>
+                    <a href="#">Gallery Post</a>
+                </li>
+                <li>
+                    <a href="#">Quote Post</a>
+                </li>
+                <li>
+                    <a href="#">Link Post</a>
+                </li>
+                <li>
+                    <a href="#">Error 404</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">Music</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>*@
+    </ul>
+</nav>
+
