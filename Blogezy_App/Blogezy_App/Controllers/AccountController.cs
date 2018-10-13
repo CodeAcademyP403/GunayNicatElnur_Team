@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Blogezy_App.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
 
         private readonly UserManager<UserApp> _userManager;
