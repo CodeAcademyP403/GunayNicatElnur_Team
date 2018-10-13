@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blogezy_App.Migrations
 {
     [DbContext(typeof(BlogezyDbContext))]
-    [Migration("20181013071225_Initial")]
+    [Migration("20181013075238_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
