@@ -57,12 +57,12 @@ namespace Blogezy_App
             app.UseAuthentication();
 
             app.UseMvc(x=> {
+                //x.MapRoute(
+                //    name: "Admin",
+                //    template: "{area}/{controller=Home}/{action=Index}/{id?}"
+                //);
                 x.MapRoute(
-                    name: "Admin",
-                    template: "{area}/{controller=Home}/{action=Index}/{id?}"
-                );
-                x.MapRoute(
-                    name:"default",
+                    name:"",
                     template:"{controller=Home}/{action=Index}/{id?}"
                 );
                 

@@ -16,11 +16,13 @@ namespace Blogezy_App.Controllers
         private readonly UserManager<UserApp> _userManager;
         private readonly SignInManager<UserApp> _signInManager;
 
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> Login(LoginModel loginModel)
         {
             UserApp appUser = await _userManager.FindByEmailAsync(loginModel.Email);
