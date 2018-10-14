@@ -1,0 +1,34 @@
+
+
+#Reg{
+    height: 100%!important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#Reg>main{
+    width: 100%;
+}
+#Reg>main .form{
+    background: #fff;
+    padding: 50px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px;
+}
+#Reg>main .form .footer{
+    display: flex;
+    justify-content: space-between;
+}
+#Reg>main .form .footer a{
+    color: rgb(79, 166, 206);
+}
+
+
+/* Register Role */
+section#Student{
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
