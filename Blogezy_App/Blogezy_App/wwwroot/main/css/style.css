@@ -112,9 +112,13 @@ body {
   margin-right: 3px;
 }
 #main #mainArticle p {
+  height:100px;
+  overflow:hidden;
   margin: 10px auto;
 }
-
+#main #mainArticle span#art {
+        margin: 10px auto;
+    }
 /*# sourceMappingURL=style.css.map */
 
 .outerwrapper {

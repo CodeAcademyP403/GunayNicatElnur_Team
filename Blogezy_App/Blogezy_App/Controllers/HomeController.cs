@@ -24,5 +24,12 @@ namespace Blogezy_App.Controllers
 
             return View(articles);
         }
+
+        public IActionResult Article(int id)
+        {
+            Article article = _blogezyDb.Articles.Find(id);
+
+            return View(article);
+        }
     }
 }
