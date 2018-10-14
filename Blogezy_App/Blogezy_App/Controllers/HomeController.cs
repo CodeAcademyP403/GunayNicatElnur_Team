@@ -17,6 +17,7 @@ namespace Blogezy_App.Controllers
             _blogezyDb = blogezyDb;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             List<Article> articles = _blogezyDb.Articles.ToList();

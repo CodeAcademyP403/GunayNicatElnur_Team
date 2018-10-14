@@ -43,6 +43,8 @@ namespace Blogezy_App.Controllers
 
                 UserApp appUser = await _userManager.FindByEmailAsync(loginModel.Email);
 
+               
+
                 if (appUser !=null)
                 {
                     await _signInManager.PasswordSignInAsync(appUser, loginModel.Password, true, true);
