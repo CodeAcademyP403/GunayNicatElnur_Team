@@ -59,7 +59,7 @@ namespace Blogezy_App.Models.ViewModels
                 MetaDescription = articleModel.MetaDescription,
                 MetaKeywords = articleModel.MetaKeywords,
                 Name = articleModel.Name,
-                PhotoPath = articleModel.File.Name,
+                PhotoPath = articleModel.File.FileName,
                 Tags = articleModel.Tags
                 //,AuthorId = articleModel.Author
             };

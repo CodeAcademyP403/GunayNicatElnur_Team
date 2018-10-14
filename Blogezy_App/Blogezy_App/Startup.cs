@@ -60,14 +60,14 @@ namespace Blogezy_App
             app.UseMvc(x=> {
 
                 x.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );
+                x.MapRoute(
                    name: "Admin",
                    template: "{area=exists}/{controller=Home}/{action=Index}/{id?}"
                );
-                x.MapRoute(
-                    name:"",
-                    template:"{controller=Home}/{action=Index}/{id?}"
-                );
-               
+                
             });
 
         }
