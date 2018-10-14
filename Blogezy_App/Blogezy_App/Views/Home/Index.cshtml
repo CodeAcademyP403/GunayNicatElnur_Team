@@ -20,62 +20,9 @@
             <div class="row">
                 <!-- Sidebar -->
                 <div class="col-md-4">
-                    <nav id="sidebar">
-                        <div class="sidebar-header">
-                            <img src="~/main/images/logo.png" alt="">
-                            <p>Graduating from the halls of the University Of Western Sydney in late 2011.</p>
-                        </div>
+                  
+                    @await Component.InvokeAsync("Menu");
 
-                        <ul class="list-unstyled components">
-
-                            <li class="active">
-                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-                            </li>
-                            <li>
-                                <a asp-controller="Account" asp-action="Register">Register</a>
-                            </li>
-                            <li>
-                                <a asp-action="Login" asp-controller="Account">Login</a>
-                            </li>
-
-                            <li>
-                                <a href="#featuresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Features</a>
-                                <ul class="collapse list-unstyled" id="pageSubmenu">
-                                    <li>
-                                        <a href="#">Standart Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Video Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Audio Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Gallery Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Quote Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Link Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Error 404</a>
-                                    </li>
-                                </ul>
-                            </li>
-                           
-                            <li>
-                                <a href="#">Music</a>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
                 <section id="main" class="col-md-8">
                     <div class="container">

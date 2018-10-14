@@ -18,5 +18,7 @@ namespace Blogezy_App.Data
         public DbSet<UserApp> UserApps { get; set; }
         public DbSet<Article> Articles { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<SubMenu> SubMenus { get; set; }
     }
 }
