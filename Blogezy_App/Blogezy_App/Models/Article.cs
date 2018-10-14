@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Blogezy_App.Models.ViewModels;
 
 namespace Blogezy_App.Models
 {
@@ -22,5 +23,7 @@ namespace Blogezy_App.Models
         public DateTime AddedDate { get; set; }
         public DateTime EditDate { get; set; }
         public int ViewCount { get; set; }
+
+      
     }
 }

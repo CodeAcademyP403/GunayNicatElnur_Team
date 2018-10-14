@@ -51,21 +51,23 @@ namespace Blogezy_App
             }
 
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseCookiePolicy();
 
             app.UseAuthentication();
 
             app.UseMvc(x=> {
-                
+
+                x.MapRoute(
+                   name: "Admin",
+                   template: "{area=exists}/{controller=Home}/{action=Index}/{id?}"
+               );
                 x.MapRoute(
                     name:"",
                     template:"{controller=Home}/{action=Index}/{id?}"
                 );
-                x.MapRoute(
-                    name: "Admin",
-                    template: "{area=exists}/{controller=Home}/{action=Index}/{id?}"
-                );
+               
             });
 
         }
